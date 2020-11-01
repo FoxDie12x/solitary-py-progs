@@ -1,0 +1,19 @@
+EXERCISE 1:
+    Display contents of directory
+    
+    Write a program that asks the user for a directory, and then displays the 
+    characteristics of that directory.
+    
+    The characteristics include:
+        - permissions of that directory (for owner, group, all)
+        - contents of that directory (with the option to list contents of 
+        subdirectories recursively)
+    
+    
+    
+        
+        
+
+        
+        
+    
