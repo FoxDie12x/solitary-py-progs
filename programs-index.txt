@@ -48,7 +48,27 @@
     
     
         
+4:  Random text generator
+
+    This program generates random text and dsiplays statistics about the text.
+    The random text is saved into plain .txt-files(s). Storing the text can be 
+    spread over multiple .txt-files.
+    
+    Text files should have limits:
+        255 characters per line
+        1 million lines per file
         
+    - User input is required to specify the number of text files to write to.
+    - User input is also required to specify *where* to store the output files.
+    - User input is also required to specify the type of characters allowed to be 
+    output (numbers, alphanumerical, punctuation characters, combinations and/or
+    exclusion of certain or sets of characters, etc)
+    
+    
+    
+    
+
+            
 
         
         
