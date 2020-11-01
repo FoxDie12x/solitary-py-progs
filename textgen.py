@@ -1,11 +1,11 @@
-import os.path, random
+import os.path, random, chart
 
 def write_data(path: str) -> str:
     """ Writes data to a file, and returns the file path """
 
     filePath = path + '/' + 'file.txt'
     writeFile =  open(filePath, 'w')        
-    for line in range(5000):
+    for line in range(1000000):
         for char in range(255):
             int = random.randrange(97, 123)
             writeFile.write(chr(int) + '')
@@ -36,9 +36,7 @@ def get_statistics_of_file(filePath):
                     charsDict[letter] = 1
                 else: 
                     charsDict[letter] = charsDict[letter] + 1       
-                charsDict['totalCharacters'] = charsDict['totalCharacters'] + 1
-                    
-                        
+                charsDict['totalCharacters'] = charsDict['totalCharacters'] + 1                                            
     return charsDict
                 
 
@@ -81,7 +79,8 @@ def main():
     
     # Get statistics about the new file
     stats =  get_statistics_of_file(filePath)
-    print(stats)
+#    print(stats)
+    chart.draw_chart(stats)
     
     
     
