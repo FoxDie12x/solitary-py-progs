@@ -28,15 +28,15 @@ class DirectoryContents:
            
         self.path = path
         contents = os.listdir(self.path)
-        print(contents)
         self.total_directories = 0
         self.total_files = 0
         
+        print(self.path)        
         for x in contents:    
             self._iteration = 1         
             if os.path.isdir(self.path + '/' + x):                
                 new_prefix = self.__prepare_prefix(self._iteration)
-                print(new_prefix, x)
+                print(new_prefix + x)
                 self._iteration = self._iteration + 1
                 self.total_directories = self.total_directories + 1
                 self.__iterate_through_dir(self.path + '/' + x)
@@ -44,11 +44,12 @@ class DirectoryContents:
             else:    
                 if x[0] != '.':                   
                     new_prefix = self.__prepare_prefix(1)
-                    print(new_prefix, f'{x}')
+                    print(new_prefix + f'{x}')
                     self.total_files = self.total_files + 1
         
+        print()
         print('total directories:', self.total_directories, '; total files:', self.total_files)
-        
+        print()
        
        
     def __iterate_through_dir(self, path: str):    
@@ -63,7 +64,7 @@ class DirectoryContents:
         for x in contents:
             if os.path.isdir(path + '/' + x):  
                 new_prefix = self.__prepare_prefix(self._iteration)
-                print(new_prefix, x)
+                print(new_prefix + x)
                 
                 # Step forward
                 self._iteration = self._iteration + 1                 
@@ -76,7 +77,7 @@ class DirectoryContents:
                 if x[0] != '.':
 
                     new_prefix = self.__prepare_prefix(self._iteration)
-                    print(new_prefix, f'{x}')
+                    print(new_prefix + f'{x}')
                     
                     # add to total files
                     self.total_files = self.total_files + 1
