@@ -1,13 +1,18 @@
 import os.path, random
 
-def write_data(path: str):
-    with open(path + '/' + 'file.txt', 'w') as file:        
-        for line in range(50000):
-            for char in range(255):
-                int = random.randrange(97, 123)
-                file.write(chr(int) + '')
-            file.write('\n')
-            
+def write_data(path: str) -> str:
+    """ Writes data to a file, and returns the file path """
+
+    filePath = path + '/' + 'file.txt'
+    writeFile =  open(filePath, 'w')        
+    for line in range(5000):
+        for char in range(255):
+            int = random.randrange(97, 123)
+            writeFile.write(chr(int) + '')
+        writeFile.write('\n')
+    writeFile.close()
+    return filePath
+    
     
 
 def specify_path() -> str: 
@@ -17,6 +22,27 @@ def specify_path() -> str:
             '\nPlease try again.\n')
         specify_path()
     return location
+
+
+
+def get_statistics_of_file(filePath):
+    charsDict = {'totalCharacters': 0}
+    with open(filePath, 'r') as f:
+        for line in f.readlines():
+            for letter in line:
+                if ord(letter) == 10:
+                    continue                    
+                if (letter in charsDict) == False:
+                    charsDict[letter] = 1
+                else: 
+                    charsDict[letter] = charsDict[letter] + 1       
+                charsDict['totalCharacters'] = charsDict['totalCharacters'] + 1
+                    
+                        
+    return charsDict
+                
+
+    
 
 
 def main():
@@ -51,7 +77,11 @@ def main():
     path = specify_path()
     
     # Write data
-    write_data(path)
+    filePath =  write_data(path)
+    
+    # Get statistics about the new file
+    stats =  get_statistics_of_file(filePath)
+    print(stats)
     
     
     
