@@ -54,9 +54,7 @@ def diamond_word(n: int, s: str):
             currentRowLength = len(line)    
             addition = 1 if len(s) > 3 else 0
             print((' ' * ((maxLength // 2) - ((currentRowLength // 2) - addition)))[:-1], end='')   
-            print(s)
-        
-        
+            print(s)                
         
         
 def diamond_char(n: int, char: str, /):
