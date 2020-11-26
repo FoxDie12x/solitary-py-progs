@@ -69,6 +69,33 @@
 
     User is asked for his b-day. Bday must be given in ISO 8601 format 
     (yyyy-mm-dd). The program then displays the astrological sign of the user.
+    
+    
+6:  Password utility
+    
+    This program should generate a random password for a user. The password's 
+    strength varies according to which rules should apply. The rules to apply 
+    will be set by user input. The following rules should be applicable:
+        - minimum and maximum length for the password
+        - whether the password should contain any letters, digits, or special chars
+        - the minimum number of each character type (letter, digit, special chars) 
+        and whether it should be unique chars
+        - uppercase, lowercase or both
+        
+    The program should also be able to check a given password's strength. The 
+    password to check should be a string passed to a function. The password's 
+    strength is determined by:
+        - length of the password (0-8 = weak, 9-16 = medium, 17-higher = strong)
+        - whether there is a combination of letters, digits, and special chars
+        (if only letters or digits = weak, 
+        if at least 2 char types = medium, 
+        if all character types present = strong)
+        - whether there is repetition of a character (the more repetition, the weaker)
+        - whether there is a sequence in characters (the stronger the sequence, the weaker)
+        
+        
+        
+    
 
         
     
