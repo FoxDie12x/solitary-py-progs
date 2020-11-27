@@ -76,7 +76,7 @@ class Password:
         if len(self.__char_classes) == 0:
             raise Exception('No character classes are selected. Please select at'
                 '\nleast one character class in order to generate a password. To '
-                '\nselect a character class, use one of the setter methods.')
+                '\nselect a character class, use one of the setter methods')
         
         output = ''
         
