@@ -82,6 +82,7 @@
         and whether it should be unique chars
         - uppercase, lowercase or both
         
+    // TODO
     The program should also be able to check a given password's strength. The 
     password to check should be a string passed to a function. The password's 
     strength is determined by:
@@ -94,6 +95,38 @@
         - whether there is a sequence in characters (the stronger the sequence, the weaker)
         
         
+7:  Weather data
+
+    This program fetches data from an open weather data api and displays the 
+    result in the terminal. 
+    It should display today's weather, as well as the forecast for the next 7 
+    days for the current location by default. Alternatively, the user can set a 
+    different location and view the weather forecast for that location's weather
+    and forecast. 
+    It makes use of the KNMI open data API for locations in The Netherlands. 
+    Alternatively, for locations outside of The Netherlands different API data
+    providers should be selectable.
+    For KNMI open data:
+        - netCDF4 
+            https://en.wikipedia.org/wiki/NetCDF
+            https://unidata.github.io/netcdf4-python/netCDF4/
+            https://pypi.org/project/netCDF4/
+            https://github.com/Unidata/netcdf4-python
+            https://towardsdatascience.com/read-netcdf-data-with-python-901f7ff61648
+        - HDF5 
+            http://www.h5py.org/
+            https://docs.h5py.org/en/latest/
+        - KNMI developer portal 
+            https://developer.dataplatform.knmi.nl/example-scripts
+            https://developer.dataplatform.knmi.nl/faq
+            https://developer.dataplatform.knmi.nl/apis/
+            https://knmi.nl/kennis-en-datacentrum
+    
+    For PIP:
+        - python pip 
+            https://pip.pypa.io/en/stable/
+            https://linuxize.com/post/how-to-install-pip-on-ubuntu-20.04/
+        - ubuntu: python3-pip package, to use call the following command: pip3 <package>
         
     
 
